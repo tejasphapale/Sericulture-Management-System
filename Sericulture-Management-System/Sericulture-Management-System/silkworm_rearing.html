@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Silkworm Rearing | SericultureMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #264653;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav .menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav .menu a:hover {
+      color: #e9c46a;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 20px;
+      background: url('https://cdn.pixabay.com/photo/2018/01/21/09/56/silkworm-3092698_1280.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #264653;
+      margin: 60px 0 20px;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .content p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .card {
+      flex: 0 0 280px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #e76f51;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #264653;
+      color: white;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>🌿 SericultureMS</h2>
+    <div class="menu">
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Silkworm Rearing</h1>
+      <p>Master the techniques of silkworm rearing for efficient silk production, focusing on ideal conditions, hygiene, and disease management.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Introduction</h2>
+    <p>Silkworm rearing is the critical stage in sericulture where healthy silkworms are raised under controlled conditions to produce high-quality silk. This process involves feeding them fresh mulberry leaves, maintaining optimal environmental conditions, and preventing diseases to maximize silk yield.</p>
+    <img src="silkworm_rearing.jpeg" alt="Silkworm Rearing Room" />
+  </section>
+
+  <section>
+    <h2>Key Points of Silkworm Rearing</h2>
+    <div class="cards-wrapper">
+      <div class="card">
+        <img src="Hygiene Practices.jpeg" alt="Hygiene Practices"/>
+        <h3>Hygiene Practices</h3>
+        <p>Maintain clean rearing trays and rooms to prevent contamination. Ensure proper sanitation to avoid disease spread.</p>
+      </div>
+
+      <div class="card">
+        <img src="feeding.jpeg" alt="Feeding Silkworms"/>
+        <h3>Feeding Silkworms</h3>
+        <p>Provide fresh, tender mulberry leaves regularly. Proper feeding ensures healthy growth and maximum cocoon yield.</p>
+      </div>
+
+      <div class="card">
+        <img src="temperature_control.jpeg" alt="Temperature & Humidity Control"/>
+        <h3>Temperature & Humidity Control</h3>
+        <p>Maintain optimal temperature (23-28°C) and humidity (70-85%) for silkworm development throughout the rearing stages.</p>
+      </div>
+
+      <div class="card">
+        <img src="disease_control.jpeg" alt="Disease Management"/>
+        <h3>Disease Management</h3>
+        <p>Regularly monitor for disease symptoms. Use eco-friendly disinfectants and isolate infected batches immediately.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+
+</html>

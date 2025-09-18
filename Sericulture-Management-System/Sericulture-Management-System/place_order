@@ -1,0 +1,49 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+// Database connection
+$host = 'localhost';
+$db   = 'sericulture';
+$user = 'postgres';
+$pass = 'yourpassword';
+$port = '5432';
+
+try {
+    $conn = new PDO("pgsql:host=$host;port=$port;dbname=$db", $user, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Get order details from POST
+    $user_id      = $_POST['user_id']; 
+    $product_name = $_POST['product_name'];
+    $quantity     = $_POST['quantity'];
+    $total_amount = $_POST['total_amount'];
+    $city         = $_POST['city'];
+
+    // Insert order
+    $stmt = $conn->prepare("
+    INSERT INTO orders (user_id, product_name, quantity, total_amount, city, address) 
+    VALUES (:user_id, :product_name, :quantity, :total_amount, :city, :address) 
+    RETURNING id
+");
+
+    $stmt->execute([
+        ':user_id' => $user_id,
+        ':product_name' => $product_name,
+        ':quantity' => $quantity,
+        ':total_amount' => $total_amount,
+        ':city' => $city,
+        ':address'=> $address
+    ]);
+
+    $order_id = $stmt->fetchColumn();
+
+    echo json_encode([
+        "success" => true,
+        "order_id" => $order_id,
+        "total" => $total_amount
+    ]);
+} catch (PDOException $e) {
+    echo json_encode(["success" => false, "message" => $e->getMessage()]);
+}
+

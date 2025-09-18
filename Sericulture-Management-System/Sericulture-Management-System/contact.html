@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | SericultureMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #2c3e50;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav .menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav .menu a:hover {
+      color: #f39c12;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(rgba(44,62,80,0.85), rgba(44,62,80,0.85)),
+                  url('https://cdn.pixabay.com/photo/2017/01/20/00/30/contact-1991015_1280.jpg') no-repeat center center/cover;
+      color: white;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .info-card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .map-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact-form {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #2c3e50;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background: #2c3e50;
+      color: white;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .contact-form button:hover {
+      background: #f39c12;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #2c3e50;
+      color: white;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>🌿 SericultureMS</h2>
+    <div class="menu">
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>We are here to provide expert support to sericulture farmers and researchers in Maharashtra. Reach out for guidance, assistance, or partnership opportunities.</p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info">
+    <div class="info-card">
+      <h3>📍 Office Location</h3>
+      <p>Sericulture Management Office<br>123 Silk Road, Mulberry Village<br>Sangamner, Maharashtra, India – 422605</p>
+    </div>
+    <div class="info-card">
+      <h3>📞 Phone Numbers</h3>
+      <p>+91 98765 43210<br>+91 91234 56789</p>
+    </div>
+    <div class="info-card">
+      <h3>✉️ Email Addresses</h3>
+      <p>support@sericulturms.com<br>info@sericulturms.com</p>
+    </div>
+  </section>
+
+  <!-- Google Maps (Sangamner, Maharashtra) -->
+  <section class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.561754432257!2d74.44305541490258!3d19.567896387032832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc6751f97a63cf%3A0x12a491e62fc42e72!2sSangamner%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1694725300000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <input type="text" name="subject" placeholder="Subject" required/>
+      <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+
+</html>

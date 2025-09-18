@@ -1,0 +1,23 @@
+
+    <!-- Payment Modal -->
+    <div class="order-modal" id="paymentModal">
+      <div class="order-content payment-box">
+        <span class="close-btn" onclick="closePayment()">&times;</span>
+        <h2>Payment Invoice</h2>
+        <div class="bill" id="paymentDetails"></div>
+        <div class="payment-method">
+          <label for="paymentMethod">Select Payment Method</label>
+          <select id="paymentMethod" required>
+            <option value="">--Choose--</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Credit/Debit Card</option>
+            <option value="COD">Cash on Delivery</option>
+          </select>
+        </div>
+        <button class="confirm-btn" onclick="confirmPayment()">💳 Confirm Payment</button>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="payment.js"></script>
+
+    </div>

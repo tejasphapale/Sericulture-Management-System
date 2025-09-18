@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sericulture Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { color: #fff; overflow-x: hidden; }
+
+    /* Navbar */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 60px; background: rgba(38, 70, 83, 0.9); color: white;
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      backdrop-filter: blur(6px); box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    nav h2 { font-size: 24px; font-weight: 700; display: flex; align-items: center; }
+    nav h2 span { margin-right: 8px; }
+    nav .menu a {
+      margin: 0 15px; text-decoration: none; color: white; font-weight: 500;
+      padding: 6px 12px; border-radius: 6px; transition: all 0.3s ease;
+    }
+    nav .menu a:hover { background: #e9c46a; color: #264653; }
+
+    /* Hero Section */
+    .hero {
+      position: relative; height: 100vh; width: 100%;
+      display: flex; justify-content: center; align-items: center; text-align: center;
+      padding: 20px; background: url("seri.jpeg") no-repeat center center/cover;
+      background-attachment: fixed; /* fixed background */
+    }
+    .hero::before {
+      content: ""; position: absolute; top: 0; left: 0;
+      height: 100%; width: 100%; background: rgba(0,0,0,0.55); z-index: 0;
+    }
+    .hero-text { position: relative; z-index: 1; max-width: 700px; animation: fadeInUp 1.2s ease-out; }
+    .hero-text h1 {
+      font-size: 55px; font-weight: 700; margin-bottom: 25px; line-height: 1.2;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    }
+    .hero-text p { font-size: 18px; line-height: 1.7; margin-bottom: 40px; color: #f1f1f1; }
+
+    /* Buttons */
+    .btn, .btn-outline {
+      padding: 15px 35px; border-radius: 8px; font-size: 18px; font-weight: 600;
+      cursor: pointer; margin: 8px; transition: all 0.3s ease;
+    }
+    .btn { border: none; background: #e76f51; color: white; }
+    .btn:hover { background: #d45d3f; transform: translateY(-3px); }
+    .btn-outline { border: 2px solid #e9c46a; background: transparent; color: #e9c46a; }
+    .btn-outline:hover { background: #e9c46a; color: #264653; transform: translateY(-3px); }
+
+    /* Cards Section */
+    .cards-section { padding: 60px 20px; background: #f4f4f4; text-align: center; color: #333; }
+    .cards-section h2 { font-size: 32px; margin-bottom: 40px; color: #264653; }
+
+    .carousel-wrapper { overflow: hidden; position: relative; width: 100%; }
+    .carousel-track {
+      display: flex; width: calc(300px * 8); /* 8 cards for loop */
+      animation: scroll 25s linear infinite;
+    }
+    .carousel-wrapper:hover .carousel-track { animation-play-state: paused; }
+
+    .card {
+      flex: 0 0 280px; margin: 0 15px; background: #fff; border-radius: 14px;
+      overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card h3 { margin: 15px 0 10px; font-size: 20px; color: #e76f51; }
+    .card p { font-size: 15px; color: #444; padding: 0 15px 15px; }
+    .btn-small {
+      display: inline-block; margin-bottom: 15px; padding: 8px 18px;
+      border-radius: 6px; background: #264653; color: #fff;
+      font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.3s ease;
+    }
+    .btn-small:hover { background: #e76f51; }
+    .card:hover { transform: translateY(-8px) scale(1.05); box-shadow: 0 12px 28px rgba(0,0,0,0.15); }
+
+    /* Contact Section */
+    .contact-section { padding: 60px 20px; background: #264653; text-align: center; }
+    .contact-section h2 { font-size: 26px; margin-bottom: 20px; color: #e9c46a; }
+    .contact-section p { margin-bottom: 10px; font-size: 16px; color: #f1f1f1; }
+
+    /* Footer */
+    footer { text-align: center; padding: 15px; background: #222; color: white; font-size: 14px; }
+
+    /* Animations */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav { flex-direction: column; padding: 15px 20px; }
+      nav .menu { margin-top: 10px; }
+      .hero-text h1 { font-size: 36px; }
+      .hero-text p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2><span>🌿</span> SericultureMS</h2>
+    <div class="menu">
+      <a href="first.html">Home</a>
+      <a href="about.html">About Us</a>
+     
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Sericulture<br>Management System</h1>
+      <p>Digitize your mulberry cultivation, silkworm rearing, disease monitoring, and silk production. Our system provides modern solutions for farmers, researchers, and silk industry stakeholders.</p>
+      <form action="login.html" method="get" style="display:inline;">
+        <button class="btn">🚀 Get Started</button>
+      </form>
+      <a href="#contact"><button type="button" class="btn-outline">📩 Contact Us</button></a>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards-section" id="services">
+    <h2>🚀 Our Services</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        
+        <!-- Original Cards -->
+        <div class="card">
+          <img src="about1.jpeg" alt="About Us">
+          <h3>About Us</h3>
+          <p>Learn about our mission and vision in sericulture.</p>
+          <a href="about.html" class="btn-small">Read More</a>
+        </div>
+
+        <div class="card">
+          <img src="products.jpeg" alt="Products">
+          <h3>Products</h3>
+          <p>Explore fertilizers, silkworms, and other products.</p>
+          <a href="products.html" class="btn-small">View Products</a>
+        </div>
+
+        <div class="card">
+          <img src="services.jpeg" alt="Services">
+          <h3>Services</h3>
+          <p>We provide guidance and disease monitoring support.</p>
+          <a href="services.html" class="btn-small">Explore</a>
+        </div>
+
+        <div class="card">
+          <img src="contact.jpeg" alt="Contact">
+          <h3>Contact</h3>
+          <p>Get in touch with us for support and queries.</p>
+          <a href="contact.html" class="btn-small">Contact Now</a>
+        </div>
+
+        <!-- Duplicate Cards (for seamless infinite loop) -->
+        <div class="card">
+          <img src="about1.jpeg" alt="About Us">
+          <h3>About Us</h3>
+          <p>Learn about our mission and vision in sericulture.</p>
+          <a href="about.html" class="btn-small">Read More</a>
+        </div>
+
+        <div class="card">
+          <img src="products.jpeg" alt="Products">
+          <h3>Products</h3>
+          <p>Explore fertilizers, silkworms, and other products.</p>
+          <a href="products.html" class="btn-small">View Products</a>
+        </div>
+
+        <div class="card">
+          <img src="services.jpeg" alt="Services">
+          <h3>Services</h3>
+          <p>We provide guidance and disease monitoring support.</p>
+          <a href="services.html" class="btn-small">Explore</a>
+        </div>
+
+        <div class="card">
+          <img src="contact.jpeg" alt="Contact">
+          <h3>Contact</h3>
+          <p>Get in touch with us for support and queries.</p>
+          <a href="contact.html" class="btn-small">Contact Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>📞 Contact Us</h2>
+    <p>Email: info@sericulturems.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: Sangamner, Maharashtra, India</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+</html>

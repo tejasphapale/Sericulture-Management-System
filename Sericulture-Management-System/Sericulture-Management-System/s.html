@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sericulture Products</title>
+
+  <!-- pdf library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <h1>Sericulture Products</h1>
+
+  <!-- Product Section -->
+  <div>
+    <h2>Our Products</h2>
+    <div>
+      <h3>Silkworm Cocoons - ₹850/kg</h3>
+      <button onclick="openOrder('Silkworm Cocoons',850)">Order Now</button>
+    </div>
+    <div>
+      <h3>Silkworm Eggs - ₹320/box</h3>
+      <button onclick="openOrder('Silkworm Eggs',320)">Order Now</button>
+    </div>
+    <div>
+      <h3>Live Silkworms - ₹500/100 worms</h3>
+      <button onclick="openOrder('Live Silkworms',500)">Order Now</button>
+    </div>
+  </div>
+
+  <!-- Order Form Modal -->
+  <div id="orderModal" style="display:none;">
+    <h2>Order Form</h2>
+    <form id="orderForm">
+      <input type="hidden" id="product">
+      <input type="hidden" id="price">
+      <label>Name:</label>
+      <input type="text" id="customerName" required>
+      <label>Mobile:</label>
+      <input type="text" id="mobile" required>
+      <label>Area:</label>
+      <select id="area" required>
+        <option value="">--Select Area--</option>
+        <option>Sangamner</option>
+        <option>Nashik</option>
+        <option>Akole</option>
+        <option>Pune</option>
+      </select>
+      <label>Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" required>
+      <button type="submit">Submit Order</button>
+      <button type="button" onclick="closeOrder()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Payment Section -->
+  <div id="paymentModal" style="display:none;">
+    <h2>Payment</h2>
+    <div id="billSection">
+      <!-- Bill will appear here -->
+    </div>
+    <label>Payment Method:</label>
+    <select id="paymentMethod">
+      <option value="">--Select--</option>
+      <option>Cash on Delivery</option>
+      <option>UPI</option>
+      <option>Credit/Debit Card</option>
+    </select>
+    <br><br>
+    <button onclick="confirmPayment()">Confirm Payment</button>
+    <button onclick="closePayment()">Cancel</button>
+  </div>
+
+  <!-- JS File -->
+  <script src="s.js"></script>
+</body>
+</html>

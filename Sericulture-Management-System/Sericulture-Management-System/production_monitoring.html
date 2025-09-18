@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Production Monitoring | SericultureMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #264653;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav h2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    nav .menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav .menu a:hover {
+      color: #e9c46a;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 120px 20px;
+      background: url('https://cdn.pixabay.com/photo/2018/05/22/20/12/factory-3429108_1280.jpg') no-repeat center center/cover;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+    .hero-text p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    }
+
+    /* Section Titles */
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #264653;
+      margin: 60px 0 20px;
+    }
+
+    /* Content Sections */
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .content p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .content img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Cards for key points */
+    .cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .card {
+      flex: 0 0 280px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      padding: 20px;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      color: #e76f51;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #264653;
+      color: white;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      nav {
+        flex-direction: column;
+      }
+      .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>🌿 SericultureMS</h2>
+    <div class="menu">
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Production Monitoring</h1>
+      <p>Track and optimize the entire silkworm rearing and silk production process for maximum efficiency and yield.</p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="content">
+    <h2>Introduction</h2>
+    <p>Production monitoring is essential for efficient sericulture management. It helps track every stage of silkworm rearing, leaf consumption, cocoon production, and overall farm performance. Our platform enables real-time data tracking, early identification of issues, and performance optimization for maximum productivity.</p>
+    <img src="production_monitoring jpeg" alt="Production Monitoring">
+  </section>
+
+  <!-- Key Aspects of Production Monitoring -->
+  <section>
+    <h2>Key Aspects of Production Monitoring</h2>
+    <div class="cards-wrapper">
+      <div class="card">
+        <img src="silkworm_growth.jpeg" alt="Silkworm Growth">
+        <h3>Silkworm Growth Tracking</h3>
+        <p>Monitor each instar stage of silkworms, track weight gain, and detect any growth abnormalities early.</p>
+      </div>
+      <div class="card">
+        <img src="leaf_consumption.jpeg" alt="Leaf Consumption">
+        <h3>Leaf Consumption Monitoring</h3>
+        <p>Track daily leaf consumption to ensure healthy feeding rates and detect shortages or overfeeding patterns.</p>
+      </div>
+      <div class="card">
+        <img src="cocoon_production.jpeg" alt="Cocoon Production">
+        <h3>Cocoon Production Analysis</h3>
+        <p>Analyze cocoon yield data per batch to evaluate productivity and silkworm health over time.</p>
+      </div>
+      <div class="card">
+        <img src="performance_report.jpeg" alt="Performance Reports">
+        <h3>Performance Reports</h3>
+        <p>Generate detailed reports summarizing farm performance metrics, helping in decision-making and process optimization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+</html>

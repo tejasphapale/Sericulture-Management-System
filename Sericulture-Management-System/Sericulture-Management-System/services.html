@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Sericulture Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: #264653;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav .menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav .menu a:hover {
+      color: #e9c46a;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #2a9d8f, #264653);
+      color: white;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #264653;
+    }
+
+    .services-section p {
+      margin-bottom: 40px;
+      color: #666;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .service-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: white;
+      width: 280px;
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      filter: brightness(0.95) contrast(1.1);
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .service-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(1) contrast(1.2);
+    }
+
+    .service-card h3 {
+      margin: 15px 0 10px;
+      color: #e76f51;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #444;
+      padding: 0 15px 15px;
+    }
+
+    .service-card a {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 18px;
+      border-radius: 6px;
+      background: #264653;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .service-card a:hover {
+      background: #e76f51;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #264653;
+      color: white;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .service-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h2>🌿 SericultureMS</h2>
+    <div class="menu">
+      <a href="first.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Our Services</h1>
+    <p>We provide modern solutions for sericulture: from mulberry cultivation to silk production monitoring.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2>🌱 Explore Our Services</h2>
+    <p>Each of our services is tailored to help farmers, researchers, and industry experts improve productivity and quality.</p>
+
+    <div class="service-wrapper">
+      <div class="service-card">
+        <img src="mulberry_cultivation.jpeg" alt="Mulberry Cultivation">
+        <h3>Mulberry Cultivation</h3>
+        <p>Guidance on growing healthy mulberry leaves for silkworms with best practices and fertilizers.</p>
+        <a href="mulberry_cultivation.html">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="Silkworm Rearing.jpeg" alt="Silkworm Rearing">
+        <h3>Silkworm Rearing</h3>
+        <p>Step-by-step support for raising silkworms in controlled conditions to improve silk yield.</p>
+        <a href="silkworm_rearing.html">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="Disease Management.jpeg" alt="Disease Monitoring">
+        <h3>Disease Management</h3>
+        <p>Monitoring silkworm health, identifying early signs of disease, and providing solutions.</p>
+        <a href="disease_managment.html">Learn More</a>
+      </div>
+
+      <div class="service-card">
+        <img src="Production Monitoring.jpeg" alt="Production Monitoring">
+        <h3>Production Monitoring</h3>
+        <p>Track silk thread production, manage quality control, and improve overall efficiency.</p>
+        <a href="production_monitoring.html">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sericulture Management System | Designed with ❤️ for Farmers & Researchers
+  </footer>
+
+</body>
+</html>

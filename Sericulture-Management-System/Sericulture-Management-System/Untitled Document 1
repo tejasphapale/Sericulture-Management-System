@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sangamner Sericulture Products</title>
+  <link rel="stylesheet" href="area.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    /* Simple blur effect */
+    .blur {
+      filter: blur(5px);
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px; right: 15px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    button {
+      cursor: pointer;
+      padding: 8px 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="mainContent">
+    <header>
+      <h1>Sericulture in Sangamner</h1>
+      <p>Trusted farmers producing high-quality silkworm products</p>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About Sangamner</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <!-- About -->
+      <section id="about">
+        <h2>About Sericulture</h2>
+        <p>Sangamner, Ahmednagar district, is a hub for sericulture...</p>
+      </section>
+
+      <!-- Products -->
+      <section id="products">
+        <h2>Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <h3>Silkworm Cocoons</h3>
+            <p>₹850 / kg</p>
+            <button onclick="openOrder('Silkworm Cocoons')">Order Now</button>
+          </div>
+          <div class="product-card">
+            <h3>Silkworm Eggs</h3>
+            <p>₹320 / box</p>
+            <button onclick="openOrder('Silkworm Eggs')">Order Now</button>
+          </div>
+          <div class="product-card">
+            <h3>Live Silkworms</h3>
+            <p>₹500 / 100 worms</p>
+            <button onclick="openOrder('Live Silkworms')">Order Now</button>
+          </div>
+          <div class="product-card">
+            <h3>Silk Yarn</h3>
+            <p>₹1500 / kg</p>
+            <button onclick="openOrder('Silk Yarn')">Order Now</button>
+          </div>
+          <div class="product-card">
+            <h3>Mulberry Leaves</h3>
+            <p>₹200 / bundle</p>
+            <button onclick="openOrder('Mulberry Leaves')">Order Now</button>
+          </div>
+          <div class="product-card">
+            <h3>Chrysalis Powder</h3>
+            <p>₹750 / 500g</p>
+            <button onclick="openOrder('Chrysalis Powder')">Order Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Sericulture Co.</p>
+    </footer>
+  </div>
+
+  <!-- Order Modal -->
+  <div class="modal" id="orderModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeOrder()">&times;</span>
+      <h2>Place Order</h2>
+      <form id="orderForm">
+        <label>Product:</label>
+        <input type="text" id="product" readonly><br>
+        <label>Name:</label>
+        <input type="text" id="name" required><br>
+        <label>Mobile:</label>
+        <input type="tel" id="mobile" pattern="[0-9]{10}" required><br>
+        <label>Address:</label>
+        <textarea id="address" required></textarea><br>
+        <label>Quantity:</label>
+        <input type="number" id="quantity" min="1" required><br>
+        <button type="submit">Submit Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="modal" id="paymentModal">
+    <div class="modal-content" id="paymentDetails"></div>
+  </div>
+
+  <script src="payment.js"></script>
+</body>
+</html>
+
